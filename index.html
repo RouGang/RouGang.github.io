@@ -108,8 +108,8 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
-      author: '博主'
+      userId: '31c3ae91c4a628a8453b6d456d70bb17',
+      author: 'Hikaru'
     },
     algolia: {
       applicationID: '',
@@ -221,6 +221,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -303,6 +313,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/12/elk/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/12/elk/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -335,22 +355,22 @@
 </ul>
 <h3 id="why"><a href="#why" class="headerlink" title="why"></a>why</h3><ul>
 <li><p>线上出现问题,没有日志.</p>
-<p> <img src="log/bq/jingya.jpg" alt=""></p>
+<p> <img src="/2017/03/12/elk/bq/jingya.jpg" alt="logo"></p>
 </li>
 <li><p>日志有了,日志文件内容没有什么规范,且文件又多.<br> 小明有强大的运维功底使用 cat  grep  awk 等命令.</p>
-<p> <img src="log/bq/baodian.jpg" alt=""></p>
-<p> 王尼玛看呆了<br> <img src="log/bq/huanggua.png" alt=""></p>
+<p> <img src="/2017/03/12/elk/bq/baodian.jpg" alt="logo"></p>
+<p> 王尼玛看呆了<br> <img src="/2017/03/12/elk/bq/huanggua.png" alt="logo"></p>
 </li>
 </ul>
 <ul>
 <li><p>技能get了机器那么多,一台一台找,不知道啥时候弄完.</p>
-<p> <img src="log/bq/gou.png" alt=""></p>
+<p> <img src="/2017/03/12/elk/bq/gou.png" alt="logo"></p>
 </li>
 <li><p>日志打多了,服务器硬盘空间不够了,导致服务挂了.</p>
-<p> <img src="log/bq/ma.jpg" alt=""></p>
+<p> <img src="/2017/03/12/elk/bq/ma.jpg" alt="logo"></p>
 </li>
 <li><p>要出报表,怎么出啊,数据库查询好慢啊.</p>
-<p> <img src="log/bq/geyou.jpg" alt=""></p>
+<p> <img src="/2017/03/12/elk/bq/geyou.jpg" alt="logo"></p>
 </li>
 <li><p>……   </p>
 </li>
@@ -365,7 +385,7 @@
 <h3 id="how"><a href="#how" class="headerlink" title="how"></a>how</h3><h4 id="整体架构"><a href="#整体架构" class="headerlink" title="整体架构"></a>整体架构</h4><ul>
 <li>logback-&gt;rsyslog-&gt;kafka-&gt;logstash-&gt;elasticsearch-&gt;kibana</li>
 </ul>
-<p><img src="log/log.jpg" alt=""></p>
+<p><img src="/2017/03/12/elk/log.jpg" alt="logo"></p>
 <ul>
 <li>logback java的日志工具,支持syslog.</li>
 <li>rsyslog linux的日志工具.</li>
@@ -374,7 +394,7 @@
 <li>elasticsearch  存储查询.</li>
 <li>kibana 显示.</li>
 </ul>
-<p><img src="log/bq/xindalu.png" alt=""></p>
+<p><img src="/2017/03/12/elk/bq/xindalu.png" alt="logo"></p>
 <h5 id="logback"><a href="#logback" class="headerlink" title="logback"></a>logback</h5><blockquote>
 <p>logback是log4j原作者开发取代log4j的日志工具.</p>
 </blockquote>
@@ -404,7 +424,7 @@
 <h5 id="elk"><a href="#elk" class="headerlink" title="elk"></a>elk</h5><blockquote>
 <p>企业级比较成熟的开源的日志平台</p>
 </blockquote>
-<p>  <img src="log/elk.png" alt=""></p>
+<p>  <img src="/2017/03/12/elk/elk.png" alt="logo"></p>
 <h5 id="Elasticsearch-是一个实时的分布式搜索和分析引擎，它可以用于全文搜索，结构化搜索以及分析"><a href="#Elasticsearch-是一个实时的分布式搜索和分析引擎，它可以用于全文搜索，结构化搜索以及分析" class="headerlink" title="Elasticsearch 是一个实时的分布式搜索和分析引擎，它可以用于全文搜索，结构化搜索以及分析"></a>Elasticsearch 是一个实时的分布式搜索和分析引擎，它可以用于全文搜索，结构化搜索以及分析</h5><ul>
 <li>实时分析</li>
 <li>分布式实时文件存储，并将每一个字段都编入索引</li>
@@ -506,11 +526,11 @@
 <li>积分兑换记录</li>
 <li>……</li>
 </ul>
-<h4 id="易用的查询"><a href="#易用的查询" class="headerlink" title="易用的查询"></a>易用的查询</h4><p><img src="log/search.png" alt=""></p>
-<h4 id="丰富的报表"><a href="#丰富的报表" class="headerlink" title="丰富的报表"></a>丰富的报表</h4><p><img src="log/kibana.png" alt=""><br><br></p>
-<p><img src="log/bq/top.png" alt=""></p>
-<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-<p><img src="log/bq/kubi.jpg" alt=""></p>
+<h4 id="易用的查询"><a href="#易用的查询" class="headerlink" title="易用的查询"></a>易用的查询</h4><p><img src="/2017/03/12/elk/search.png" alt="logo"></p>
+<h4 id="丰富的报表"><a href="#丰富的报表" class="headerlink" title="丰富的报表"></a>丰富的报表</h4><p><img src="/2017/03/12/elk/kibana.png" alt="logo"><br><br></p>
+<p><img src="/2017/03/12/elk/bq/top.png" alt="logo"></p>
+<p><br><br><br></p>
+<p><img src="/2017/03/12/elk/bq/kubi.jpg" alt="logo"></p>
 <h3 id="未来展望"><a href="#未来展望" class="headerlink" title="未来展望"></a>未来展望</h3><ul>
 <li>其他端日志接入</li>
 <li>大数据分析</li>
@@ -775,32 +795,43 @@
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"rougang"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
-	
 
 
 
 
 
-  
 
-
-
-
-
-  
-
-
-
-
-
-  
 
 
 

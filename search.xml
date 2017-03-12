@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[elk]]></title>
+      <url>%2F2017%2F03%2F12%2Felk%2F</url>
+      <content type="text"><![CDATA[日志服务日志能做什么? 问题追踪 数据分析 告警 安全审计 why 线上出现问题,没有日志. 日志有了,日志文件内容没有什么规范,且文件又多. 小明有强大的运维功底使用 cat grep awk 等命令. 王尼玛看呆了 技能get了机器那么多,一台一台找,不知道啥时候弄完. 日志打多了,服务器硬盘空间不够了,导致服务挂了. 要出报表,怎么出啊,数据库查询好慢啊. …… what （需要什么样的东东） 海量的统一收集. 统一的分析,存储. 安全审计. 快速查询问题,实时告警. 丰富的报表展示. how整体架构 logback-&gt;rsyslog-&gt;kafka-&gt;logstash-&gt;elasticsearch-&gt;kibana logback java的日志工具,支持syslog. rsyslog linux的日志工具. kafka 分布式的消息订阅系统. logstash 收集. elasticsearch 存储查询. kibana 显示. logback logback是log4j原作者开发取代log4j的日志工具. slf4j支持参数化告别if(logger.isDebugEnable()) 时代. logback 整体性能由于log4j,已经很多大型项目中使用,比较成熟. log4j对syslog的长度超过1024字节会进行拆包,分成多条日志. rsyslog 支持多线程 支持TCP、SSL、TLS、RELP等协议 强大的过滤器，可实现过滤日志信息中的任意部分 支持自定义输出格式 适用于企业级别日志记录需求 模块化 kafka 解耦 冗余 扩展性 灵活性 &amp; 峰值处理能力 可恢复性 顺序保证 缓冲 异步通信 elk 企业级比较成熟的开源的日志平台 Elasticsearch 是一个实时的分布式搜索和分析引擎，它可以用于全文搜索，结构化搜索以及分析 实时分析 分布式实时文件存储，并将每一个字段都编入索引 文档导向，所有的对象全部是文档 高可用性，易扩展，支持集群（Cluster）、分片和复制（Shards 和 Replicas）。 接口友好，支持 JSON Logstash 是一个具有实时渠道能力的数据收集引擎 几乎可以访问任何数据 可以和多种外部应用结合 支持弹性扩展 Kibana 是一款基于 Apache 开源协议，使用 JavaScript 语言编写，为 Elasticsearch 提供分析和可视化的 Web 平台 前端操作炫丽,对日志进行高效的搜索、可视化、分析等各种操作。 接入规范接入的日志格式及其规范 logback配置 1234567&lt;appender name="SYSLOG" class="ch.qos.logback.classic.net.SyslogAppender"&gt; &lt;syslogHost&gt;127.0.0.1&lt;/syslogHost&gt; &lt;port&gt;514&lt;/port&gt; &lt;facility&gt;local7&lt;/facility&gt; &lt;suffixPattern&gt;appname: %msg%n&lt;/suffixPattern&gt; &lt;/appender&gt; 名称 NULL 备注 主机ip NO 主机ip 日志时间 NO 格式yyyyMMddHHMMssS 例如 20161111111111 日志应用名 NO 最好简短且唯一且为英文名 日志级别 NO 2 FATAL 3 ERR 4 WARNING 5 NOTCIE 6 INFO 7 DEBUG 操作耗时 NO 单位毫秒 具体的格式推荐: {“ip”:””,time:””,”app”:””,”level”:””,”elapsed”:””,data:””}直接json解析 |ip|time|app|level|elapsed|data需正则匹配 接口标准的请求返回格式（建议） 编码 名称 NULL 备注 code 结果编码 NO 0 成功 其他各业务自定义 msg 消息 NO 消息内容 data body YES 其他结果内容 日志列表 登录日志 商品浏览日志 （目前会受缓存影响） 下单日志 购物车操作历史记录 抽奖记录 积分兑换记录 …… 易用的查询 丰富的报表 未来展望 其他端日志接入 大数据分析 个性化推荐 产品方向定位 参考 elk中文翻译 问题 eleasticsearch kibana logstash 启动都比较慢. 时间不一致 已解决注意系统的时区,需要是东八区. logstash tags 是什么意义. elk 服务 nginx 访问 kafka 禁止个人私自创建topic kafka 数据有丢失. ok partitions.number 如果设置，请设置准确，因为数据会对此做负载均衡，如果数目准确，会导致数据丢失。 elasticsearch 如何实现嵌套json字段. 多个input 怎么切换. ok logrotate 可能会导致服务原来的文件有问题. 操作问题. ok ip应用 记录logstash的错误信息 _geoip_lookup_failure kafka,elastcisearch 是否能限制空间大小 elk 登录日志 商品浏览日志 （目前会受缓存影响） 下单日志 购物车操作历史记录 抽奖记录 积分兑换记录 ……]]></content>
+    </entry>
+
+    
+  
+  
+</search>
